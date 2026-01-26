@@ -32,10 +32,29 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ```
 67run/
 ├── src/
-│   └── app/
-│       ├── layout.tsx      # Root layout
-│       ├── page.tsx        # Home page
-│       └── globals.css     # Global styles with Tailwind
+│   ├── app/                    # App Router directory
+│   │   ├── api/                # API routes
+│   │   │   └── example/        # Example API route
+│   │   ├── layout.tsx          # Root layout
+│   │   ├── page.tsx            # Home page
+│   │   └── globals.css         # Global styles with Tailwind
+│   ├── components/             # React components
+│   │   ├── ui/                 # UI components (buttons, cards, etc.)
+│   │   └── Example.tsx         # Example component
+│   ├── lib/                    # Library code
+│   │   ├── api/                # API client and network utilities
+│   │   │   └── client.ts       # API client configuration
+│   │   └── utils.ts            # Utility functions (cn helper)
+│   ├── hooks/                  # Custom React hooks
+│   │   └── useExample.ts       # Example hook
+│   ├── utils/                  # Utility functions
+│   │   └── index.ts            # Common utilities
+│   ├── types/                  # TypeScript type definitions
+│   │   └── index.ts            # Shared types and interfaces
+│   ├── constants/              # Application constants
+│   │   └── index.ts            # App-wide constants
+│   ├── styles/                 # Additional styles
+│   └── store/                  # State management (if using Zustand/Redux)
 ├── package.json
 ├── tsconfig.json
 ├── tailwind.config.ts
