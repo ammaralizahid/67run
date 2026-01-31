@@ -123,6 +123,15 @@ const DynamicCardGrid: React.FC<DynamicCardGridProps> = ({ cards, title }) => {
           </div>
         ))}
       </div>
+            {/* Button below the cards */}
+            <div className="flex justify-center mt-8">
+        <Button
+          variant="primary"
+          className="px-6 py-3 text-sm font-medium"
+        >
+          Weitere Veranstaltungen Anzeigen
+        </Button>
+      </div>
     </>
   );
 };

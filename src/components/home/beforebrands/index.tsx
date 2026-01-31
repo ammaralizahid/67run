@@ -5,7 +5,19 @@ import Image from "next/image"
 
 export default function DiscoverSection() {
   return (
-    <section className="relative w-full bg-[#435CBC] h-auto md:h-[501px] overflow-visible py-8">
+    <section className="relative w-full bg-[#273067] overflow-visible py-8 md:py-0 md:h-[501px]">
+
+      {/* Background Image */}
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src="/flash.svg"
+          alt="Background Flash"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
       <div className="max-w-[1366px] h-full mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between px-4 relative z-10">
 
         {/* Right Image */}
@@ -14,7 +26,7 @@ export default function DiscoverSection() {
             src="/brands/Runner.svg"
             alt="Runners"
             width={578}
-            height={610} // actual image height
+            height={610}
             className="object-contain"
           />
         </div>

@@ -5,6 +5,7 @@ import DynamicCardGrid from "./dynamicticketcard";
 import Brand from "./brands";
 import BeforeBrands from "./beforebrands";
 import Ratings from "./ratings";
+import Reviews from "./reviews";
 export default function Home() {
   const slides = ["/slider/1.svg", "/slider/1.svg", "/slider/1.svg"];
   const cardData = [
@@ -61,6 +62,7 @@ export default function Home() {
         <DynamicCardGrid title="Kommende Veranstaltungen" cards={cardData} />
       </section>
       <Ratings />
+      <Reviews/>
       <BeforeBrands />
       <section className="mx-auto my-8 w-full max-w-[668px] h-auto px-4"></section>
       <Brand brands={brands} />
