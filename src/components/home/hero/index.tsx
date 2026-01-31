@@ -1,29 +1,36 @@
 'use client';
 
 import { useState } from 'react';
-import Button from '@/components/layout/button'
+import Image from 'next/image';
+import Button from '@/components/layout/button';
 
-interface DotSliderProps {
+interface HeroSectionProps {
   slides: string[];
 }
 
-const DotSlider: React.FC<DotSliderProps> = ({ slides }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <div className="relative w-full max-w-[1366px] mx-auto">
+    <div className="relative w-full mx-auto">
       {/* Slider */}
       <div className="relative w-full aspect-[1366/697] overflow-hidden">
         {/* Images */}
         {slides.map((slide, index) => (
-          <img
+          <div
             key={index}
-            src={slide}
-            alt={`Slide ${index + 1}`}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+            className={`absolute inset-0 transition-opacity duration-500 ${
               index === currentIndex ? 'opacity-100' : 'opacity-0'
             }`}
-          />
+          >
+            <Image
+              src={slide}
+              alt={`Slide ${index + 1}`}
+              fill
+              priority={index === 0}
+              className="object-cover"
+            />
+          </div>
         ))}
 
         {/* Text + Button */}
@@ -33,7 +40,6 @@ const DotSlider: React.FC<DotSliderProps> = ({ slides }) => {
             verborgenen Läufer in Ihnen
           </h2>
 
-          {/* Use your Button component here */}
           <Button
             variant="primary"
             className="w-[140px] sm:w-[155px] md:w-[171px] h-[42px] sm:h-[45px] md:h-[48px] text-[15px] sm:text-[16px] md:text-[18px] flex items-center justify-center"
@@ -59,4 +65,4 @@ const DotSlider: React.FC<DotSliderProps> = ({ slides }) => {
   );
 };
 
-export default DotSlider;
+export default HeroSection;

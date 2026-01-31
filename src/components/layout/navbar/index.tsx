@@ -6,22 +6,6 @@ import Link from 'next/link'
 import { FiMenu, FiX } from 'react-icons/fi'
 import Button from '@/components/layout/button'
 
-
-{/* DESKTOP / TABLET BUTTONS */}
-<div className="hidden lg:flex gap-2">
-  <Button variant="primary">Login</Button>
-  <Button variant="secondary">Registrieren</Button>
-</div>
-
-
-
-{/* MOBILE MENU BUTTONS */}
-<div className="flex flex-col gap-2 mt-2">
-  <Button variant="primary">Login</Button>
-  <Button variant="secondary">Registrieren</Button>
-</div>
-
-
 const navLinks = [
   { name: 'Startseite', href: '/' },
   { name: 'Laufkalender', href: '/Laufkalender' },
@@ -35,18 +19,18 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-white font-poppins shadow-md z-50">
-      <div className="max-w-[1366px] mx-auto px-4 md:px-6 flex justify-between items-center h-[72px]">
+      <div className="max-w-[1366px] mx-auto px-4 md:px-6 flex justify-between items-center min-h-[72px] py-2">
         
         {/* LEFT SIDE */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 h-full">
           {/* LOGO */}
-          <div className="relative w-[72px] h-[72px]">
+          <div className="relative h-full flex items-center py-2">
             <Image
               src="/navbar/Logo.svg"
               alt="Logo"
               width={72}
               height={72}
-              className="w-[72px] h-[72px]"
+              className="object-contain"
             />
           </div>
 
@@ -75,8 +59,8 @@ export default function Navbar() {
 
           {/* BUTTONS FOR LG AND ABOVE */}
           <div className="hidden lg:flex gap-2">
-            <Button variant="primary" >Login</Button>
-            <Button variant="secondary">Registrieren</Button>
+            <Button className='w-full min-w-[109px]' variant="primary">Login</Button>
+            <Button className='w-full min-w-[109px]' variant="secondary">Registrieren</Button>
           </div>
 
           {/* MOBILE / TABLET MENU BUTTON */}

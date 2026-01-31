@@ -1,19 +1,24 @@
-'use client'
+"use client";
+
+import Image from "next/image";
 
 interface Brand {
-  id: number
-  name: string
-  logo: string
+  id: number;
+  name: string;
+  logo: string;
 }
 
 interface BrandProps {
-  brands: Brand[]
+  brands: Brand[];
 }
 
 export default function Brand({ brands }: BrandProps) {
   return (
-    <section className="w-full py-16">
-      <div className="max-w-[1366px] mx-auto px-4">
+    <section className="w-full py-10">
+      <h2 className="font-semibold text-[24px] lg:text-[43px] leading-[42px] font-poppins text-center mb-6">
+        Veranstaltungspartner
+      </h2>
+      <div className="max-w-[1366px] mx-auto px-4 mt-4">
         <div
           className="
             grid
@@ -26,21 +31,17 @@ export default function Brand({ brands }: BrandProps) {
           "
         >
           {brands.map((brand) => (
-            <img
-              key={brand.id}
-              src={brand.logo}
-              alt={brand.name}
-              className="
-                max-w-[115px]
-                max-h-[123px]
-                w-full
-                h-auto
-                object-contain
-              "
-            />
+            <div key={brand.id} className="relative w-auto h-auto">
+              <Image
+                src={brand.logo}
+                alt={brand.name}
+                height={124}
+                width={124}
+              />
+            </div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

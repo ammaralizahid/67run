@@ -1,11 +1,10 @@
-import Layout from '../components/layout'
-import Main from '../components/home'
+import Layout from "../components/layout";
+import HomeComponent from "../components/home";
 
 export default function Home() {
   return (
     <Layout>
-     <Main/>
-      
+      <HomeComponent />
     </Layout>
   );
 }
