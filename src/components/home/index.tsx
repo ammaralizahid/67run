@@ -74,7 +74,7 @@ export default function Home() {
       <Ratings />
       <Reviews/>
       <BeforeBrands />
-      <section className="mx-auto my-8 w-full max-w-[668px] h-auto px-4"></section>
+      <section className="mx-auto my-8 w-full max-w-[668px] h-auto px-4"></section> 
       <Brand brands={brands} />
     </div>
   );
