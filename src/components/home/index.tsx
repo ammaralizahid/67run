@@ -54,22 +54,22 @@ export default function Home() {
     { id: 5, name: "Brand 5", logo: "/brands/Power.svg" },
     { id: 6, name: "Brand 6", logo: "/brands/United.svg" },
   ];
-const sectionData = {
-  imageSrc: "/brands/FriendsRunning.svg",
-  imageAlt: "About image",
-  title: "Über uns ",
-  heading: "Willkommen bei Runnersmeet ",
-  description:
-    "Willkommen bei Runnersmeet – Deiner Plattform für Laufbegeisterte und Vereine! Wir sind ein Team von vier Gründern, jeder mit seiner eigenen einzigartigen Rolle und Leidenschaft für das Laufen.Sebastian, unser Experte für Mediengestaltung, sorgt dafür, dass Runnersmeet nicht nur funktional, sondern auch visuell ansprechend ist. Seine kreative Expertise verwandelt unsere Plattform in ein Erlebnis, das Läufer lieben werden.Willkommen bei Runnersmeet – Deiner Plattform für Laufbegeisterte und Vereine! Wir sind ein Team von vier Gründern, jeder mit seiner eigenen einzigartigen Rolle und Leidenschaft für das Laufen.Sebastian, unser Experte für Mediengestaltung, sorgt dafür, dass Runnersmeet nicht nur funktional, sondern auch visuell ansprechend ist. Seine kreative Expertise verwandelt unsere Plattform in ein Erlebnis, das Läufer lieben werden.",
-  buttonText: "Mehr Sehen",
-}
+  const sectionData = {
+    imageSrc: "/brands/FriendsRunning.svg",
+    imageAlt: "About image",
+    title: "Über uns ",
+    heading: "Willkommen bei Runnersmeet ",
+    description:
+      "Willkommen bei Runnersmeet – Deiner Plattform für Laufbegeisterte und Vereine! Wir sind ein Team von vier Gründern, jeder mit seiner eigenen einzigartigen Rolle und Leidenschaft für das Laufen.Sebastian, unser Experte für Mediengestaltung, sorgt dafür, dass Runnersmeet nicht nur funktional, sondern auch visuell ansprechend ist. Seine kreative Expertise verwandelt unsere Plattform in ein Erlebnis, das Läufer lieben werden.Willkommen bei Runnersmeet – Deiner Plattform für Laufbegeisterte und Vereine! Wir sind ein Team von vier Gründern, jeder mit seiner eigenen einzigartigen Rolle und Leidenschaft für das Laufen.Sebastian, unser Experte für Mediengestaltung, sorgt dafür, dass Runnersmeet nicht nur funktional, sondern auch visuell ansprechend ist. Seine kreative Expertise verwandelt unsere Plattform in ein Erlebnis, das Läufer lieben werden.",
+    buttonText: "Mehr Sehen",
+  };
   return (
     <div>
       <Hero slides={slides} />
       <section className="w-full bg-gray-50 py-10">
         <DynamicCardGrid title="Kommende Veranstaltungen" cards={cardData} />
       </section>
-      <Runner {...sectionData}/>
+      <Runner {...sectionData} />
       <Ratings />
       <BeforeBrands />
       <section className="mx-auto my-8 w-full max-w-[668px] h-auto px-4"></section>
