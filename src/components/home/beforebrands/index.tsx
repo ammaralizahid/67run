@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export default function DiscoverSection() {
   return (
-    <section className="relative w-full bg-[#273067] overflow-visible py-8 md:py-0 md:h-[501px]">
+    <section className="relative w-full bg-[#273067] overflow-visible py-8 md:py-0 md:h-[501px] mt-10">
 
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">

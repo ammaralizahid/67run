@@ -24,7 +24,7 @@ export default function ImageContentSection({
     <section className="w-full bg-white">
       <div className="max-w-[1366px] mx-auto px-5">
         {/* Parent flex container takes full height of its tallest child */}
-        <div className="flex flex-col lg:flex-row lg:items-stretch gap-10 lg:gap-20">
+        <div className="flex flex-col lg:flex-row lg:items-stretch gap-10 lg:gap-20 ml-5">
           
           {/* Column 1 – Image with background */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
@@ -46,7 +46,7 @@ export default function ImageContentSection({
           </div>
 
           {/* Column 2 – Content */}
-          <div className="w-full lg:w-1/2 flex flex-col items-start justify-center">
+          <div className="w-full lg:w-1/2 flex flex-col items-start ">
             <p className="font-['DM_Sans'] text-[20px] leading-[100%] capitalize text-black mb-3 mt-5">
               {title}
             </p>
