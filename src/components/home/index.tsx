@@ -7,6 +7,7 @@ import Ratings from "./ratings";
 import Reviews from "./reviews";
 import Runner from "./runner";
 import DiscoverSection from "./discover-section";
+import BeforeReviews from "./beforereviews";
 export default function Home() {
   const slides = ["/slider/1.svg", "/slider/1.svg", "/slider/1.svg"];
   const cardData = [
@@ -85,6 +86,10 @@ export default function Home() {
       />
 
       <section className="mx-auto my-8 w-full max-w-[668px] h-auto px-4"></section>
+      <BeforeReviews/>
+      <Reviews/>
+      {/* <BeforeBrands /> */}
+      <section className="mx-auto my-8 w-full max-w-[668px] h-auto px-4"></section> 
       <Brand brands={brands} />
     </div>
   );

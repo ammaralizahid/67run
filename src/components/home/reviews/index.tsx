@@ -35,7 +35,7 @@ const reviewers = [
 
 export default function Reviews() {
   return (
-    <section className="w-full pb-20">
+    <section className="w-full pb-20 pt-20">
       <div className="max-w-[1366px] mx-auto px-6 flex flex-col lg:flex-row gap-10">
         {/* LEFT CONTENT */}
         <div className="flex flex-col lg:w-1/3">
