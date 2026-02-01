@@ -3,10 +3,10 @@ import Hero from "./hero";
 import Title from "./title";
 import DynamicCardGrid from "./dynamicticketcard";
 import Brand from "./brands";
-import BeforeBrands from "./beforebrands";
 import Ratings from "./ratings";
 import Reviews from "./reviews";
 import Runner from "./runner";
+import DiscoverSection from "./discover-section";
 export default function Home() {
   const slides = ["/slider/1.svg", "/slider/1.svg", "/slider/1.svg"];
   const cardData = [
@@ -61,7 +61,7 @@ export default function Home() {
     title: "Über uns ",
     heading: "Willkommen bei Runnersmeet ",
     description:
-      "Willkommen bei Runnersmeet – Deiner Plattform für Laufbegeisterte und Vereine! Wir sind ein Team von vier Gründern, jeder mit seiner eigenen einzigartigen Rolle und Leidenschaft für das Laufen.Sebastian, unser Experte für Mediengestaltung, sorgt dafür, dass Runnersmeet nicht nur funktional, sondern auch visuell ansprechend ist. Seine kreative Expertise verwandelt unsere Plattform in ein Erlebnis, das Läufer lieben werden.Willkommen bei Runnersmeet – Deiner Plattform für Laufbegeisterte und Vereine! Wir sind ein Team von vier Gründern, jeder mit seiner eigenen einzigartigen Rolle und Leidenschaft für das Laufen.Sebastian, unser Experte für Mediengestaltung, sorgt dafür, dass Runnersmeet nicht nur funktional, sondern auch visuell ansprechend ist. Seine kreative Expertise verwandelt unsere Plattform in ein Erlebnis, das Läufer lieben werden.",
+      "Willkommen bei Runnersmeet – Deiner Plattform für Laufbegeisterte und Vereine! Wir sind ein Team von vier Gründern, jeder mit seiner eigenen einzigartigen Rolle und Leidenschaft für das Laufen.\n\nSebastian, unser Experte für Mediengestaltung, sorgt dafür, dass Runnersmeet nicht nur funktional, sondern auch visuell ansprechend ist. Seine kreative Expertise verwandelt unsere Plattform in ein Erlebnis, das Läufer lieben werden.\n\nJoel, unser Ideengeber und leidenschaftlicher Läufer, ist das Herzstück von Runnersmeet. Mit seiner Vision haben wir diese Plattform ins Leben gerufen, um Läufern weltweit zu helfen, ihre Ziele zu erreichen und ihre Leidenschaft für das Laufen zu teilen.\n\nSteve, unser Arbeitstier und kreativer Kopf, ist der Mann hinter den Kulissen. Seine technischen Fähigkeiten und seine unermüdliche Arbeitsethik sorgen dafür, dass Runnersmeet reibungslos läuft und ständig innoviert wird.",
     buttonText: "Mehr Sehen",
   };
   return (
@@ -72,9 +72,19 @@ export default function Home() {
       </section>
       <Runner {...sectionData} />
       <Ratings />
-      <Reviews/>
-      <BeforeBrands />
-      <section className="mx-auto my-8 w-full max-w-[668px] h-auto px-4"></section> 
+      <Reviews />
+      <DiscoverSection
+        backgroundImageSrc="/flash.svg"
+        rightImageSrc="/brands/Runner.svg"
+        rightImageAlt="Runners"
+        heading="Entdecken Sie Die Freude Am Laufen – Tritt Heute Bei!"
+        description="Aliquam lorem ante dapibus in viverra quis feugiat a tellus.\nPhasellus viverra metus varius laoreet."
+        buttonText="Jetzt Starten"
+        buttonVariant="secondary"
+        buttonClass="bg-[#FC7BA2] hover:bg-pink-600"
+      />
+
+      <section className="mx-auto my-8 w-full max-w-[668px] h-auto px-4"></section>
       <Brand brands={brands} />
     </div>
   );
