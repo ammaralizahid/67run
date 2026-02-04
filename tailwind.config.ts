@@ -16,6 +16,8 @@ const config: Config = {
         "tabText": "#212121",
         "inputBg": "#F1F1F1",
         "titleColor": "#141414", // Title color
+        "brandBlue": "#3652BD",
+        "bodyText": "#2B2B2B",
       },
       fontFamily: {
         "poppins": ["Poppins", "sans-serif"],
@@ -28,6 +30,14 @@ const config: Config = {
         "newsletterInput": ["18px", { lineHeight: "18px" }],
         "tabText": ["15px", { lineHeight: "100%" }],
         "buttonText": ["15px", { lineHeight: "100%" }],
+        "10": "10px",
+        "14": "14px",
+        "16": "16px",
+        "17": "17px",
+        "18": "18px",
+        "20": "20px",
+        "32": "32px",
+        "43": "43px",
       },
       spacing: {
         "newsletterW": "383px",
@@ -39,9 +49,24 @@ const config: Config = {
         "regBtnW": "108.536px",
         "regBtnH": "35px",
       },
+      maxWidth: {
+        "page": "1366px",
+        "content": "1018px",
+      },
+      lineHeight: {
+        "15": "15px",
+        "25": "25px",
+        "39": "39px",
+        "42": "42px",
+      },
+      letterSpacing: {
+        "2": "0.02em",
+      },
       borderRadius: {
         "newsletter": "15px",
         "btn": "5px",
+        "5": "5px",
+        "10": "10px",
       },
     },
   },
