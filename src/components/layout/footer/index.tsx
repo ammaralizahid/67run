@@ -25,7 +25,7 @@ export default function Footer() {
       />
 
       {/* MAIN CONTENT */}
-      <div className="w-full px-6 py-8">
+      <div className="w-full px-6 lg:pt-24 pt-10">
         <div className="max-w-[1366px] mx-auto flex flex-col lg:flex-row lg:items-start flex-wrap lg:flex-nowrap w-full justify-between">
 
           {/* LOGO */}
@@ -115,7 +115,7 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="w-full bg-footerBg">
+      <div className="w-full bg-footerBg pt-10 lg:pt-20">
         <div className="max-w-[1366px] mx-auto px-6">
           <p className="py-4 text-center font-poppins font-normal text-footerBottom capitalize text-white">
             ©2023 Runnersmeet | Designed by Mindpath. All rights reserved | Terms & Conditions
