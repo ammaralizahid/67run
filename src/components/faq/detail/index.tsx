@@ -24,11 +24,11 @@ export default function Detail({ faq }: FaqDetailSectionProps) {
         <h2 className="text-center font-poppins font-bold text-[30px] sm:text-[36px] lg:text-[41px] leading-[1.1] tracking-[0.02em] text-[#373737] capitalize">
           Allgemeine FAQs
         </h2>
-        <div className="mt-8 sm:mt-10 mx-auto w-full max-w-[1117px] flex flex-col gap-3 sm:gap-4">
+        <div className="mt-8 sm:mt-10 mx-auto w-full max-w-full flex flex-col gap-4 sm:gap-8">
           {faq.map((item, index) => {
             const isOpen = openIndex === index;
             return (
-              <div key={item.id} className="flex w-full flex-col gap-3 sm:gap-4">
+              <div key={item.id} className="flex w-full flex-col gap-4 sm:gap-8">
                 <div className="w-full rounded-[10px] bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.10)]">
                   <button
                     type="button"

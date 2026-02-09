@@ -7,7 +7,7 @@ export default function ImageTextSection() {
     <>
       {/* ===== Hero Section ===== */}
       <section className="w-full bg-white">
-        <div className="relative max-w-[1366px] h-[345px] mx-auto overflow-hidden">
+        <div className="relative max-w-full h-[345px] mx-auto overflow-hidden">
           {/* Background Image */}
           <Image
             src="/faq/Hero.svg"
@@ -28,8 +28,6 @@ export default function ImageTextSection() {
           </div>
         </div>
       </section>
-
-     
     </>
   );
 }
