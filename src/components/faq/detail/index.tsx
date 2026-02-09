@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 type FaqItem = {
@@ -36,17 +37,16 @@ export default function Detail({ faq }: FaqDetailSectionProps) {
                     aria-expanded={isOpen}
                   >
                     <span className="mt-[2px] inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#E9F0FF]">
-                      <svg
-                        width="6"
-                        height="10"
-                        viewBox="0 0 6 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className={`transition-transform duration-200 ${isOpen ? "rotate-90" : ""}`}
+                      <Image
+                        src="/faq/Arrow.svg"
+                        alt=""
                         aria-hidden="true"
-                      >
-                        <path d="M1 1L5 5L1 9" stroke="#2F6DFF" strokeWidth="1.4" strokeLinecap="round" />
-                      </svg>
+                        width={17}
+                        height={18}
+                        className={`h-[18px] w-[17px] opacity-100 transition-transform duration-200 ${
+                          isOpen ? "rotate-0" : "-rotate-90"
+                        }`}
+                      />
                     </span>
                     <span className="flex-1 max-w-full sm:max-w-[702px] font-poppins text-[14px] sm:text-[16px] lg:text-[18px] leading-[1.3] sm:leading-[1.4] lg:leading-[18px] font-medium text-[#0B0B0B] capitalize">
                       {item.question}
