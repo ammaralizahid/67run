@@ -5,7 +5,24 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-footerBg text-white font-poppins flex flex-col">
+    <footer className="w-full bg-footerBg text-white font-poppins flex flex-col relative overflow-hidden">
+      {/* Gradient Background - Bottom Left */}
+      <div
+        className="absolute bottom-[-20px] left-[-20px] w-[180px] h-[180px] opacity-20"
+        style={{
+          background: 'radial-gradient(50% 50% at 50% 50%, #FC7BA2 0%, rgba(252, 123, 162, 0) 100%)',
+        }}
+      />
+
+      {/* Rounded Faded Oval - Top Right */}
+      <div
+        className="absolute w-[327px] h-[327px] opacity-35"
+        style={{
+          top: '-50px',
+          right: '-50px',
+          background: 'radial-gradient(50% 50% at 50% 50%, #FC7BA2 0%, rgba(252, 123, 162, 0) 100%)',
+        }}
+      />
 
       {/* MAIN CONTENT */}
       <div className="w-full px-6 py-8">
