@@ -4,32 +4,39 @@ import Image from "next/image";
 
 export default function ImageTextSection() {
   return (
-    <>
-      {/* ===== Hero Section ===== */}
-      <section className="w-full bg-white">
-        <div className="relative max-w-[1366px] h-[345px] mx-auto overflow-hidden">
-          {/* Background Image */}
-          <Image
-            src="/societies/Societies.svg"
-            alt="Für Veranstalter"
-            fill
-            className="object-cover"
-            priority
-          />
+    <section className="w-full bg-white">
+      <div className="relative w-full h-[345px] mx-auto overflow-hidden">
 
-          {/* Overlay Content */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-            <h2 className="font-poppins font-bold text-white capitalize tracking-[0.02em] leading-[39px] text-[32px] sm:text-[40px] md:text-[51px]">
-              Vereine
-            </h2>
-            <p className="mt-2 font-poppins font-normal text-white capitalize tracking-[0.02em] leading-[39px] text-[14px] sm:text-[16px] md:text-[19px]">
-              Home-Vereine
-            </p>
+        {/* Background Image */}
+        <Image
+          src="/societies/Societies.svg"
+          alt="Für Veranstalter"
+          fill
+          className="object-cover"
+          priority
+        />
+
+        {/* Center Content */}
+        <div className="absolute inset-0 flex items-center justify-center text-center">
+          <div className="relative px-14 py-10">
+
+            {/* Ultra-smooth elliptical overlay (no visible edges) */}
+            <div className="pointer-events-none absolute inset-x-[-35%] inset-y-[-55%] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.65)_35%,rgba(0,0,0,0.4)_55%,rgba(0,0,0,0.18)_70%,transparent_100%)] blur-[1.5px]" />
+
+            {/* Text */}
+            <div className="relative z-10">
+              <h2 className="font-poppins font-bold text-white capitalize tracking-[0.02em] leading-[39px] text-[32px] sm:text-[40px] md:text-[51px] drop-shadow-[0_4px_14px_rgba(0,0,0,0.75)]">
+                Vereine
+              </h2>
+              <p className="mt-2 font-poppins font-normal text-white capitalize tracking-[0.02em] leading-[39px] text-[14px] sm:text-[16px] md:text-[19px] drop-shadow-[0_4px_14px_rgba(0,0,0,0.75)]">
+                Home-Vereine
+              </p>
+            </div>
+
           </div>
         </div>
-      </section>
 
-     
-    </>
+      </div>
+    </section>
   );
 }
