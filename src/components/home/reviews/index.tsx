@@ -25,7 +25,6 @@ const reviewData = [
   },
 ];
 
-
 const reviewers = [
   "/reviews/user1.png",
   "/reviews/user2.svg",
@@ -80,44 +79,49 @@ export default function Reviews() {
 
         {/* RIGHT CONTENT: SCROLLABLE CARDS */}
         <div className="overflow-x-auto flex gap-6 snap-x snap-mandatory px-6">
-        {reviewData.map((review) => (
-  <div
-    key={review.id}
-    style={{ backgroundColor: review.bgColor }}
-    className="flex-shrink-0 snap-start p-6 rounded-xl w-80 shadow-lg relative"
-  >
-    <p className={`text-${review.textColor} text-sm mb-4`}>{review.text}</p>
-    <div className="flex items-center mb-4">
-      {Array.from({ length: review.rating }).map((_, idx) => (
-        <svg
-          key={idx}
-          className="w-5 h-5 text-yellow-400"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.955a1 1 0 00.95.69h4.15c.969 0 1.371 1.24.588 1.81l-3.36 2.44a1 1 0 00-.364 1.118l1.286 3.955c.3.921-.755 1.688-1.54 1.118l-3.36-2.44a1 1 0 00-1.175 0l-3.36 2.44c-.784.57-1.838-.197-1.539-1.118l1.286-3.955a1 1 0 00-.364-1.118L2.075 9.382c-.784-.57-.38-1.81.588-1.81h4.15a1 1 0 00.95-.69l1.286-3.955z" />
-        </svg>
-      ))}
-    </div>
-    <div className="flex items-center gap-3">
-      <div className="w-10 h-10 rounded-full overflow-hidden relative border-2 border-white">
-        <Image
-          src={review.image}
-          alt={review.name}
-          fill
-          className="object-cover"
-        />
-      </div>
-      <div>
-        <h4 className={`font-semibold text-sm text-${review.textColor}`}>
-          {review.name}
-        </h4>
-        <p className={`text-xs text-${review.textColor}`}>{review.role}</p>
-      </div>
-    </div>
-  </div>
-))}
-
+          {reviewData.map((review) => (
+            <div
+              key={review.id}
+              style={{ backgroundColor: review.bgColor }}
+              className="flex-shrink-0 snap-start p-6 rounded-xl w-80 shadow-lg relative"
+            >
+              <p className={`text-${review.textColor} text-sm mb-4`}>
+                {review.text}
+              </p>
+              <div className="flex items-center mb-4">
+                {Array.from({ length: review.rating }).map((_, idx) => (
+                  <svg
+                    key={idx}
+                    className="w-5 h-5 text-yellow-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.955a1 1 0 00.95.69h4.15c.969 0 1.371 1.24.588 1.81l-3.36 2.44a1 1 0 00-.364 1.118l1.286 3.955c.3.921-.755 1.688-1.54 1.118l-3.36-2.44a1 1 0 00-1.175 0l-3.36 2.44c-.784.57-1.838-.197-1.539-1.118l1.286-3.955a1 1 0 00-.364-1.118L2.075 9.382c-.784-.57-.38-1.81.588-1.81h4.15a1 1 0 00.95-.69l1.286-3.955z" />
+                  </svg>
+                ))}
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full overflow-hidden relative border-2 border-white">
+                  <Image
+                    src={review.image}
+                    alt={review.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <h4
+                    className={`font-semibold text-sm text-${review.textColor}`}
+                  >
+                    {review.name}
+                  </h4>
+                  <p className={`text-xs text-${review.textColor}`}>
+                    {review.role}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
