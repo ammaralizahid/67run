@@ -66,9 +66,9 @@ export default function SocietiesBrands({ cards }: SocietiesBrandsProps) {
             </div>
           ))}
         </div>
-        <div className="w-full flex justify-center mb-5">
+        <div className="w-full flex justify-center mb-10 mt-20">
           <Button className="w-[171px] h-[48px] rounded-[5px] opacity-100">
-            Mehr anzeigen
+            Mehr Sehen
           </Button>
         </div>
       </div>
