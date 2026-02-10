@@ -16,7 +16,7 @@ type SocietiesBrandsProps = {
 
 export default function SocietiesBrands({ cards }: SocietiesBrandsProps) {
   return (
-    <section className="w-full mt-[40px] opacity-100 overflow-x-hidden">
+    <section className="w-full pt-10 bg-[#EEF2FF] opacity-100 overflow-x-hidden">
       <div className="relative w-full max-w-[1366px] mx-auto px-6 sm:px-6 lg:px-6">
         <div className="mt-6 flex w-full flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
           <p className="w-full max-w-[586px] font-dmSans font-medium text-[20px] sm:text-[25px] leading-[100%] text-black text-left">
