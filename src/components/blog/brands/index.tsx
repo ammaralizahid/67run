@@ -1,5 +1,5 @@
 import BlogCard, { BlogBrandCard } from "./BlogCard";
-
+import Button from "@/components/layout/button";
 type BlogBrandsProps = {
   cards: BlogBrandCard[];
 };
