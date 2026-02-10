@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import Button from "@/components/layout/button";
@@ -31,8 +31,9 @@ export default function ImageContentSection({
           {imageSrc && (
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
               <div className="relative w-full max-w-[600px] aspect-[561/641]">
-                <div className="absolute inset-0 -translate-x-6 translate-y-6 bg-[#435CBC] rounded-[10px]" />
-                <div className="absolute inset-0 rounded-[10px] overflow-hidden">
+                <div className="absolute inset-0 bg-[#435CBC] rounded-[10px]" />
+
+                <div className="absolute inset-0 lg:translate-x-6 lg:-translate-y-6 rounded-[10px] overflow-hidden">
                   <Image
                     src={imageSrc}
                     alt={imageAlt}

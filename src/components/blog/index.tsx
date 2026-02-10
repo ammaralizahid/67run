@@ -1,7 +1,7 @@
 import Hero from "./hero";
 import BlogBrands from "./brands";
 
-export default function Society() {
+export default function Blog() {
   const description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
   const linkLabel = "Mehr erfahren";
   const href = "#";
@@ -28,3 +28,4 @@ export default function Society() {
     </>
   );
 }
+

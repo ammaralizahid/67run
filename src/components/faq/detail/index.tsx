@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 type FaqItem = {
@@ -23,11 +24,11 @@ export default function Detail({ faq }: FaqDetailSectionProps) {
         <h2 className="text-center font-poppins font-bold text-[30px] sm:text-[36px] lg:text-[41px] leading-[1.1] tracking-[0.02em] text-[#373737] capitalize">
           Allgemeine FAQs
         </h2>
-        <div className="mt-8 sm:mt-10 mx-auto w-full max-w-[1117px] flex flex-col gap-3 sm:gap-4">
+        <div className="mt-8 sm:mt-10 mx-auto w-full max-w-full flex flex-col gap-4 sm:gap-8">
           {faq.map((item, index) => {
             const isOpen = openIndex === index;
             return (
-              <div key={item.id} className="flex w-full flex-col gap-3 sm:gap-4">
+              <div key={item.id} className="flex w-full flex-col gap-4 sm:gap-8">
                 <div className="w-full rounded-[10px] bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.10)]">
                   <button
                     type="button"
@@ -36,17 +37,16 @@ export default function Detail({ faq }: FaqDetailSectionProps) {
                     aria-expanded={isOpen}
                   >
                     <span className="mt-[2px] inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#E9F0FF]">
-                      <svg
-                        width="6"
-                        height="10"
-                        viewBox="0 0 6 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className={`transition-transform duration-200 ${isOpen ? "rotate-90" : ""}`}
+                      <Image
+                        src="/faq/Arrow.svg"
+                        alt=""
                         aria-hidden="true"
-                      >
-                        <path d="M1 1L5 5L1 9" stroke="#2F6DFF" strokeWidth="1.4" strokeLinecap="round" />
-                      </svg>
+                        width={17}
+                        height={18}
+                        className={`h-[18px] w-[17px] opacity-100 transition-transform duration-200 ${
+                          isOpen ? "rotate-0" : "-rotate-90"
+                        }`}
+                      />
                     </span>
                     <span className="flex-1 max-w-full sm:max-w-[702px] font-poppins text-[14px] sm:text-[16px] lg:text-[18px] leading-[1.3] sm:leading-[1.4] lg:leading-[18px] font-medium text-[#0B0B0B] capitalize">
                       {item.question}
