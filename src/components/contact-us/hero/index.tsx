@@ -11,7 +11,6 @@ export default function ContactHero() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <h1 className="font-poppins font-bold text-white text-[30px] sm:text-[38px] md:text-[44px] leading-[1.1]">
             Kontaktiere Uns
