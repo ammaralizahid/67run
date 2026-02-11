@@ -1,0 +1,76 @@
+
+import Image from "next/image";
+
+export default function ContactCards() {
+  return (
+    <section className="w-full">
+      <div className="mx-auto w-full max-w-[1366px] px-4 md:px-6 lg:px-6">
+        <div className="-mt-10 md:-mt-12 flex flex-wrap justify-center gap-4 md:gap-6 relative z-10 max-w-[1200px] mx-auto">
+          <div className="w-full md:w-[calc(50%-0.5rem)] lg:w-[367px] h-auto md:h-[204px] rounded-[15px] bg-white shadow-[0px_4px_20px_rgba(0,0,0,0.15)] p-6 flex flex-col items-center text-center opacity-100">
+            <div className="w-[33px] h-[33px] flex items-center justify-center text-[#435CBC]">
+              <Image
+                src="/contact-us/Phone.svg"
+                alt=""
+                aria-hidden="true"
+                width={33}
+                height={33}
+                className="w-[33px] h-[33px] opacity-100"
+              />
+            </div>
+            <h3 className="mt-3 font-['DM_Sans'] font-bold text-[24px] leading-[100%] text-black">
+              Telefon
+            </h3>
+            <p className="mt-2 w-full max-w-[260px] h-auto font-['DM_Sans'] text-[16px] leading-[24px] text-black text-center">
+              Toll-Free: +1 647 374 3832
+              <br />
+              Fax: +1 647 374 3866
+            </p>
+          </div>
+
+          <div className="w-full md:w-[calc(50%-0.5rem)] lg:w-[367px] h-auto md:h-[204px] rounded-[15px] bg-[#435CBC] shadow-[0px_4px_20px_rgba(0,0,0,0.15)] p-6 flex flex-col items-center text-center text-white opacity-100">
+            <div className="w-[39px] h-[30px] flex items-center justify-center">
+              <Image
+                src="/contact-us/Email.svg"
+                alt=""
+                aria-hidden="true"
+                width={39}
+                height={30}
+                className="w-[39px] h-[30px] opacity-100"
+              />
+            </div>
+            <h3 className="mt-3 font-['DM_Sans'] font-bold text-[24px] leading-[100%]">
+              Email
+            </h3>
+            <p className="mt-2 w-full max-w-[260px] h-auto font-['DM_Sans'] text-[16px] leading-[24px] text-center">
+              info@therunningevent.com
+              <br />
+              support@therunningevent.com
+            </p>
+          </div>
+
+          <div className="w-full md:w-[calc(50%-0.5rem)] lg:w-[367px] h-auto md:h-[204px] rounded-[15px] bg-white shadow-[0px_4px_20px_rgba(0,0,0,0.15)] p-6 flex flex-col items-center text-center opacity-100">
+            <div className="w-[28px] h-[33px] flex items-center justify-center text-[#435CBC]">
+              <Image
+                src="/contact-us/Location.svg"
+                alt=""
+                aria-hidden="true"
+                width={28}
+                height={33}
+                className="w-[28px] h-[33px] opacity-100"
+              />
+            </div>
+            <h3 className="mt-3 font-['DM_Sans'] font-bold text-[24px] leading-[100%] text-black">
+              Adresse
+            </h3>
+            <p className="mt-2 w-full max-w-[260px] h-auto font-['DM_Sans'] text-[16px] leading-[24px] text-center text-black">
+              Jl. Dr. Ir Soekarno Kediri,
+              <br />
+              Tabanan, Bali
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+

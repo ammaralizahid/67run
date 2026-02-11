@@ -1,6 +1,6 @@
 import Button from "@/components/layout/button";
 import BlogCard, { BlogBrandCard } from "./BlogCard";
-
+import Button from "@/components/layout/button";
 type BlogBrandsProps = {
   cards: BlogBrandCard[];
 };
@@ -19,12 +19,11 @@ export default function BlogBrands({ cards }: BlogBrandsProps) {
             <BlogCard key={card.id} card={card} />
           ))}
         </div>
-        <Button
-          variant="primary"
-          className="w-full sm:w-[171px] h-[48px] rounded-[5px] p-0 flex items-center justify-center mx-auto"
-        >
-          Mehr Sehen
-        </Button>
+        <div className="w-full flex justify-center mb-5">
+          <Button className="w-[171px] h-[48px] rounded-[5px] opacity-100">
+            Mehr anzeigen
+          </Button>
+        </div>
       </div>
     </section>
   );
