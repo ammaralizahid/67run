@@ -1,11 +1,18 @@
 import Hero from "./hero";
 import Detail from "./detail";
+import type { BlogPost } from "@/data/blogs";
+import type { BlogDetailCardData } from "@/components/blog-detail/detail/BlogDetailCard";
 
-export default function Faq() {
+type BlogDetailProps = {
+  post: BlogPost;
+  relatedPosts: BlogDetailCardData[];
+};
+
+export default function BlogDetail({ post, relatedPosts }: BlogDetailProps) {
   return (
     <>
       <Hero />
-      <Detail />
+      <Detail post={post} relatedPosts={relatedPosts} />
     </>
   );
 }

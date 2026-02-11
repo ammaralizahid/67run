@@ -16,7 +16,10 @@ type BlogCardProps = {
 
 export default function BlogCard({ card }: BlogCardProps) {
   return (
-    <div className="w-full h-auto rounded-[15px] border border-[#DDDDDD] bg-white overflow-hidden flex flex-col">
+    <Link
+      href={card.href}
+      className="w-full h-auto rounded-[15px] border border-[#DDDDDD] bg-white overflow-hidden flex flex-col"
+    >
       <div className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[354px]">
         <Image
           src={card.image}
@@ -32,10 +35,7 @@ export default function BlogCard({ card }: BlogCardProps) {
         <p className="w-full font-poppins font-normal text-[13px] sm:text-[14px] leading-[21px] capitalize text-[#3A3A3A] text-left">
           {card.description}
         </p>
-        <Link
-          href={card.href}
-          className="inline-flex items-center gap-2 whitespace-nowrap font-poppins font-semibold text-[14px] leading-[24px] capitalize text-button-bg text-left mt-2"
-        >
+        <div className="inline-flex items-center gap-2 whitespace-nowrap font-poppins font-semibold text-[14px] leading-[24px] capitalize text-button-bg text-left mt-2">
           <span className="underline">{card.linkLabel}</span>
           <Image
             src="/blog/Arrow.svg"
@@ -45,9 +45,9 @@ export default function BlogCard({ card }: BlogCardProps) {
             height={8}
             className="shrink-0"
           />
-        </Link>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
