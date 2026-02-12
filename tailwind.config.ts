@@ -68,6 +68,15 @@ const config: Config = {
         "5": "5px",
         "10": "10px",
       },
+      keyframes: {
+        heroSlideUp: {
+          "0%": { opacity: "0", transform: "translateY(24px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "hero-slide-up": "heroSlideUp 0.6s ease-out both",
+      },
     },
   },
   plugins: [],

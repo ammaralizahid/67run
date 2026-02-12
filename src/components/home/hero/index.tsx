@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Button from '@/components/layout/button';
 
@@ -10,6 +10,20 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isIntroVisible, setIsIntroVisible] = useState(false);
+
+  useEffect(() => {
+    if (!slides.length) return;
+    const intervalId = window.setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => window.clearInterval(intervalId);
+  }, [slides.length]);
+
+  useEffect(() => {
+    const rafId = window.requestAnimationFrame(() => setIsIntroVisible(true));
+    return () => window.cancelAnimationFrame(rafId);
+  }, []);
 
   return (
     <div className="relative w-full mx-auto">
@@ -34,7 +48,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ slides }) => {
         ))}
 
         {/* Text + Button */}
-        <div className="absolute flex flex-col gap-4 sm:gap-5 md:gap-6 left-[16px] sm:left-[32px] md:left-[52px] bottom-[24px] sm:bottom-[40px] md:bottom-[55px] max-w-[90%] md:max-w-[507px]">
+        <div
+          className={`absolute flex flex-col gap-4 sm:gap-5 md:gap-6 left-[16px] sm:left-[32px] md:left-[52px] bottom-[24px] sm:bottom-[40px] md:bottom-[55px] max-w-[90%] md:max-w-[507px] transition-all duration-700 ease-out ${
+            isIntroVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
+          }`}
+        >
           <h2 className="text-white font-poppins font-bold text-[20px] sm:text-[24px] md:text-[31px] leading-[28px] sm:leading-[32px] md:leading-[39px] capitalize">
             Entdecken Sie den <br />
             verborgenen Läufer in Ihnen

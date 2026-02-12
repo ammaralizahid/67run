@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FiMenu, FiX } from 'react-icons/fi'
 import Button from '@/components/layout/button'
+import AuthModal from '@/components/ui/auth-modal'
 
 const navLinks = [
   { name: 'Startseite', href: '/' },
@@ -16,6 +17,13 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false)
+
+  const openAuthModal = () => {
+    setIsOpen(false)
+    setIsAuthModalOpen(true)
+  }
+  const closeAuthModal = () => setIsAuthModalOpen(false)
 
   return (
     <nav className="w-full bg-white font-poppins shadow-md z-50">
@@ -59,8 +67,8 @@ export default function Navbar() {
 
           {/* BUTTONS FOR LG AND ABOVE */}
           <div className="hidden lg:flex gap-2">
-            <Button className='w-full min-w-[109px]' variant="primary">Login</Button>
-            <Button className='w-full min-w-[109px]' variant="secondary">Registrieren</Button>
+            <Button className='w-full min-w-[109px]' variant="primary" onClick={openAuthModal}>Login</Button>
+            <Button className='w-full min-w-[109px]' variant="secondary" onClick={openAuthModal}>Registrieren</Button>
           </div>
 
           {/* MOBILE / TABLET MENU BUTTON */}
@@ -94,12 +102,14 @@ export default function Navbar() {
               <Image src="/navbar/EN.svg" alt="EN" width={20} height={20} />
             </div>
             <div className="flex flex-col gap-2 mt-2">
-              <Button variant="primary">Login</Button>
-              <Button variant="secondary">Registrieren</Button>
+              <Button variant="primary" onClick={openAuthModal}>Login</Button>
+              <Button variant="secondary" onClick={openAuthModal}>Registrieren</Button>
             </div>
           </ul>
         </div>
       )}
+
+      <AuthModal open={isAuthModalOpen} onClose={closeAuthModal} />
     </nav>
   )
 }

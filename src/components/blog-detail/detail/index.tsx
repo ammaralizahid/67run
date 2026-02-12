@@ -19,7 +19,7 @@ export default function Detail() {
   return (
     <>
       <section className="w-full bg-white mt-[45px] overflow-x-hidden">
-        <div className="mx-auto w-full max-w-[1366px] px-6 sm:px-6 lg:pl-[195px] lg:pr-6">
+        <div className="mx-auto w-full max-w-[1366px] px-6 sm:px-6 xl:pl-[195px] xl:pr-6">
           <div className="flex flex-wrap items-center gap-4 max-w-full md:flex-nowrap md:w-max">
             <p className="w-[110px] h-[30px] shrink-0 whitespace-nowrap font-poppins font-medium text-[18px] leading-[100%] text-[#435CBC]">
               Sep 4, 2023 |
